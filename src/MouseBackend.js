@@ -133,8 +133,7 @@ export default class MouseBackend {
     if (clientOffset) {
       this.mouseClientOffset = clientOffset
     }
-    console.log(e.target.tagName)
-    if (e.target.tagName != 'INPUT') {
+    if (this.monitor.isDragging()) {
       e.preventDefault()
     }
   }
